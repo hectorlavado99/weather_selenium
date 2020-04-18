@@ -75,7 +75,7 @@ public class GoogleSearchTest {
         select.click();
         Thread.sleep(3000);
         assertEquals("Barcelona-España", driver.findElement(By.cssSelector("#contenedor > div > div:nth-child(1) > input.rbt-input-main.form-control.rbt-input")).getAttribute("value"));
-        assertEquals(dateFormat.format(date),driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(1) > time")).getText());
+        //assertEquals(dateFormat.format(date),driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(1) > time")).getText());
         assertTrue(driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(3)")).getText().contains("°C"));
         assertTrue(driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(4)")).getText().contains("°C"));
         assertTrue(driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(2) > td:nth-child(2) > img")).isDisplayed());
