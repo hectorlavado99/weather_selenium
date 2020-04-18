@@ -36,6 +36,7 @@ public class GoogleSearchTest {
 
     @Test
     public void testViewHourly() throws InterruptedException {
+        System.out.println("test tiempo hora");
         DateFormat dateFormat = new SimpleDateFormat("HH");
         Date date = new Date(System.currentTimeMillis() + TimeUnit.HOURS.toMillis(1));
         Thread.sleep(1000);
@@ -61,7 +62,7 @@ public class GoogleSearchTest {
     public void testViewDaily() throws InterruptedException {
         DateFormat dateFormat = new SimpleDateFormat("MMM, dd", Locale.ENGLISH);
         Date date = new Date();
-        System.out.println("Hora actual: " + dateFormat.format(date));
+        System.out.println("test tiempo diario");
         Thread.sleep(3000);
         WebElement open_menu = driver.findElement(By.cssSelector("#basic-navbar-nav > div > div > a"));
         open_menu.click();
