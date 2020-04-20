@@ -18,7 +18,7 @@ import static org.junit.Assert.assertTrue;
 public class GoogleSearchTest {
 
     private WebDriver driver;
-    private String apiKey = "6qYJU7ykY0Q607cDgqwxDsmdHXqeY5Fl";
+    private String apiKey = "cLBuhJYx2rVD2JcfjKWE8p5B7QvSO57V";
 
     @Before
     public void setUp() {
@@ -45,7 +45,7 @@ public class GoogleSearchTest {
         WebElement go_hourly = driver.findElement(By.cssSelector("#hourls"));
         go_hourly.click();
         driver.findElement(By.cssSelector("#formBasicEmail")).sendKeys(apiKey);
-        driver.findElement(By.cssSelector("#contenedor > div > div:nth-child(1) > input.rbt-input-main.form-control.rbt-input")).sendKeys("madrid");
+        driver.findElement(By.cssSelector("#contenedor > div > div:nth-child(1) > input.rbt-input-main.form-control.rbt-input")).sendKeys("ma");
         Thread.sleep(3000);
         WebElement select = driver.findElement(By.cssSelector("#search-city-item-0"));
         select.click();
@@ -70,12 +70,12 @@ public class GoogleSearchTest {
         go_hourly.click();
         driver.findElement(By.cssSelector("#formBasicEmail")).sendKeys(apiKey);
         Thread.sleep(1000);
-        driver.findElement(By.cssSelector("#contenedor > div > div:nth-child(1) > input.rbt-input-main.form-control.rbt-input")).sendKeys("Barcelona");
+        driver.findElement(By.cssSelector("#contenedor > div > div:nth-child(1) > input.rbt-input-main.form-control.rbt-input")).sendKeys("ba");
         Thread.sleep(3000);
         WebElement select = driver.findElement(By.cssSelector("#search-city-item-0"));
         select.click();
         Thread.sleep(3000);
-        assertEquals("Barcelona-España", driver.findElement(By.cssSelector("#contenedor > div > div:nth-child(1) > input.rbt-input-main.form-control.rbt-input")).getAttribute("value"));
+        assertEquals("Bagdad-Iraq", driver.findElement(By.cssSelector("#contenedor > div > div:nth-child(1) > input.rbt-input-main.form-control.rbt-input")).getAttribute("value"));
         //assertEquals(dateFormat.format(date),driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(1) > time")).getText());
         assertTrue(driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(3)")).getText().contains("°C"));
         assertTrue(driver.findElement(By.cssSelector("#contenedor > table > tbody > tr:nth-child(1) > td:nth-child(4)")).getText().contains("°C"));
