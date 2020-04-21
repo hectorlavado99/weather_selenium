@@ -18,7 +18,7 @@ import static org.junit.Assert.assertTrue;
 public class GoogleSearchTest {
 
     private WebDriver driver;
-    private String apiKey = "cLBuhJYx2rVD2JcfjKWE8p5B7QvSO57V";
+    private String apiKey = "CbQtQ33R6mONVIw67QygOiAZnGNdyZvc";
 
     @Before
     public void setUp() {
